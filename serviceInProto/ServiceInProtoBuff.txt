@@ -1,0 +1,8 @@
+In protoBuff , you can also define rpc service.
+
+service CrudService {
+    rpc Create (CreateRequest) returns CreateResponse;
+    rpc Get(GetRequest) returns GetResponse;
+}
+
+gRPC is one of the framework used for implementaing RPC of protoBuff, there are quite other as well.

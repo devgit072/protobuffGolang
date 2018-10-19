@@ -1,0 +1,18 @@
+protobuff has full support for data evolution i.e as requirement changes, we need to change our protobuff struct.
+
+[Write data with new proto]  --> [Read data with old proto]  -> This called forward compatible.
+[Write data with old proto]  --> [Read data with new proto]  -> This is called backward compatible.
+
+Always remember: tag number mist not change. Thats it.
+Except tag number unchanged, u can remove or add field.
+In case if code doesn't find any field, then it will take default value. BUT tag number must be unchanged.
+
+Also when u remove the field, then tag number and name must be preserved, i.e old tag number and name MUST
+not be assigned to any future field.
+tag number and name can preserved by keyword "reserved"
+
+For example:
+message Foo {
+ reserved 2,15,12,20 to 29; //Preserved tags.
+ reserved "foo", "bar";
+}

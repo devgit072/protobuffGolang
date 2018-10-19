@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+// Oneof means only one of the field will be set not both.
+// one will be set, then other will simply be null.
+message OneofMessage {
+    int32 id = 1 ;
+    oneof example_oneof {
+        string myValue = 2;
+        int32 myIntValue = 3;
+    }
+
+}

@@ -1,0 +1,24 @@
+
+https://developers.google.com/protocol-buffers/docs/style
+
+https://github.com/uber/prototool/blob/dev/etc/style/uber/uber.proto
+
+message name should be CamelCase and field name should be underscore
+
+message MyProtoMessage { // As you can see it is CamelCase
+    string my_name = 1; // As you can see it is name with under_score.
+    string my_address_in_native = 2;
+}
+
+// Use camelCase for enum and CAPITAL_WITH_UNDERSCORE for fieldName.
+
+enum DayOfWeek {
+    UNKNOWN_DAY = 0;
+    MONDAY_DAY = 1;
+    TUESDAY_DAY = 2;
+    WEDNESDAY_DAY = 3;
+    THRUSTDAY_DAY = 4;
+    FRIDAY_DAY = 5;
+    SATURDAY_DAY = 6;
+    SUNDAY_DAY = 7;
+}

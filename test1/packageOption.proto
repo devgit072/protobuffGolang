@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package test1;
+
+// Also package name of generated simple.pb.go will be same as test1
+
+// In case you want to give packageName something different then use
+
+option go_package="custom";
+// then PackageOption.pb.go will have package name as package custom;
+
+message PackageOption {
+    int32 age = 1;
+    string name = 2;
+    string address = 3;
+}

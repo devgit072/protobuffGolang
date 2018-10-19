@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package test1;
+
+// protoc -I src/ --go_out=src/ src/protobuffGolang/test1/simple.proto
+// Above will just generate simple.pb.go in just beside of simple.proto in same directory
+// -I or --proto_path is to tell that in this directory your file will be present.
+// --go_out=src/ means inside src find simple.proto and out pb.go in same folder only.
+// Also package name of generated simple.pb.go will be same as test1
+
+// In case you want to give packageName something different then use
+message SimpleProto {
+    int32 age = 1;
+    string name = 2;
+    string address = 3;
+}

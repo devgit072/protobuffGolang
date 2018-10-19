@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message MapExample {
+    int32 id = 1;
+    //map example.
+    map<int32, string> ageToNameMap = 2;
+}

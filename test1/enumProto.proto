@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test1;
+
+message EnumProto {
+    int32 id = 1;
+    DayOfWeek weekOfday = 2;
+}
+
+enum DayOfWeek {
+    UNKNOWN = 0;
+    MONDAY = 1;
+    TUESDAY = 2;
+    WEDNESDAY = 3;
+    THRUSTDAY = 4;
+    FRIDAY = 5;
+    SATURDAY = 6;
+    SUNDAY = 7;
+}
